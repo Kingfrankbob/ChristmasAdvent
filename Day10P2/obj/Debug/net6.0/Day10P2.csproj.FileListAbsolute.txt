@@ -1,0 +1,15 @@
+C:\Users\ajwpc\Github\ChristmasAdvent\Day10P2\bin\Debug\net6.0\Day10P2.exe
+C:\Users\ajwpc\Github\ChristmasAdvent\Day10P2\bin\Debug\net6.0\Day10P2.deps.json
+C:\Users\ajwpc\Github\ChristmasAdvent\Day10P2\bin\Debug\net6.0\Day10P2.runtimeconfig.json
+C:\Users\ajwpc\Github\ChristmasAdvent\Day10P2\bin\Debug\net6.0\Day10P2.dll
+C:\Users\ajwpc\Github\ChristmasAdvent\Day10P2\bin\Debug\net6.0\Day10P2.pdb
+C:\Users\ajwpc\Github\ChristmasAdvent\Day10P2\obj\Debug\net6.0\Day10P2.csproj.AssemblyReference.cache
+C:\Users\ajwpc\Github\ChristmasAdvent\Day10P2\obj\Debug\net6.0\Day10P2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ajwpc\Github\ChristmasAdvent\Day10P2\obj\Debug\net6.0\Day10P2.AssemblyInfoInputs.cache
+C:\Users\ajwpc\Github\ChristmasAdvent\Day10P2\obj\Debug\net6.0\Day10P2.AssemblyInfo.cs
+C:\Users\ajwpc\Github\ChristmasAdvent\Day10P2\obj\Debug\net6.0\Day10P2.csproj.CoreCompileInputs.cache
+C:\Users\ajwpc\Github\ChristmasAdvent\Day10P2\obj\Debug\net6.0\Day10P2.dll
+C:\Users\ajwpc\Github\ChristmasAdvent\Day10P2\obj\Debug\net6.0\refint\Day10P2.dll
+C:\Users\ajwpc\Github\ChristmasAdvent\Day10P2\obj\Debug\net6.0\Day10P2.pdb
+C:\Users\ajwpc\Github\ChristmasAdvent\Day10P2\obj\Debug\net6.0\Day10P2.genruntimeconfig.cache
+C:\Users\ajwpc\Github\ChristmasAdvent\Day10P2\obj\Debug\net6.0\ref\Day10P2.dll
