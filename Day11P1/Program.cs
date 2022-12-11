@@ -81,36 +81,44 @@
          }
 
 
-         for (int i = 0; i < 21; i++) // 20 Rounds
+         for (int i = 0; i < 20; i++) // 20 Rounds
          {
              Console.Write("Round: ");
              Console.WriteLine(i);
              for (int a = 0; a < 8; a++)  //8 Monkeys
              {
+                   Console.Write("Monkey ");
+                   Console.WriteLine(a);
+                 try
+                 {
+                     for (int l = 0; l < 60; l++) // Each possible item
+                     {
                         switch (a)
                          {
                              case 0:
 
-                                 var workItems = mk0.ToArray();
-                                    mk0.Clear();
-                                    foreach(var item in workItems)
-                                    {
-                                    var nex = (item * 3) / 3;
-                                    
-                                    nex %= lcm;
-                                    
+                                 var workItem = mk0[0];
+                                if (workItem == 0)
+                                     break;
+
+                                 else
+                                 {
+                                    var nex = ((workItem * 3) / 3);
+						
+					nex %= Convert.ToInt32(lcm);
+
                                      if (nex % 5 == 0)
                                      {
-                                         mk2.Add(workItem);
+                                         mk2.Add(nex);
                                      }
                                      else
                                      {
-                                         mk3.Add(workItem);
+                                         mk3.Add(nex);
                                      }
-                                     mnk0 += 1;
-                                    }
-                                 
-                                 
+                                 }
+                                 mk0.RemoveAt(0);
+                                 mnk0 += 1;
+                                   Console.WriteLine(" Mk {0} interaction", a);
                                  break;
 
                              case 1:
@@ -121,10 +129,11 @@
                                  else
                                  {
                                      var nex = (workItem + 8) / 3;
+nex %= Convert.ToInt32(lcm);
                                      if (nex % 11 == 0)
-                                         mk4.Add(workItem);
+                                         mk4.Add(nex);
                                       else
-                                          mk7.Add(workItem);
+                                          mk7.Add(nex);
                                   }
                                   mk1.RemoveAt(0);
                                   mnk1++;
@@ -141,10 +150,11 @@
                                   else
                                   {
                                       var nex = (workItem + 2) / 3;
+nex %= Convert.ToInt32(lcm);
                                       if (nex % 2 == 0)
-                                          mk5.Add(workItem);
+                                          mk5.Add(nex);
                                       else
-                                          mk3.Add(workItem);
+                                          mk3.Add(nex);
                                   }
                                   mk2.RemoveAt(0);
                                   mnk2++;
@@ -160,10 +170,11 @@
                                   else
                                   {
                                       var nex = (workItem + 4) / 3;
+nex %= Convert.ToInt32(lcm);
                                       if (nex % 13 == 0)
-                                          mk1.Add(workItem);
+                                          mk1.Add(nex);
                                       else
-                                          mk5.Add(workItem);
+                                          mk5.Add(nex);
                                   }
                                   mk3.RemoveAt(0);
                                   mnk3++;
@@ -179,10 +190,11 @@
                                   else
                                   {
                                       var nex = (workItem * 19) / 3;
+nex %= Convert.ToInt32(lcm);
                                       if (nex % 7 == 0)
-                                          mk7.Add(workItem);
+                                          mk7.Add(nex);
                                       else
-                                          mk6.Add(workItem);
+                                          mk6.Add(nex);
                                   }
                                   mk4.RemoveAt(0);
                                   mnk4++;
@@ -198,10 +210,11 @@
                                   else
                                   {
                                       var nex = (workItem + 5) / 3;
+nex %= Convert.ToInt32(lcm);
                                       if (nex % 3 == 0)
-                                          mk4.Add(workItem);
+                                          mk4.Add(nex);
                                       else
-                                          mk1.Add(workItem);
+                                          mk1.Add(nex);
                                   }
                                   mk5.RemoveAt(0);
                                   mnk5++;
@@ -217,10 +230,11 @@
                                   else
                                   {
                                       var nex = (workItem * workItem) / 3;
+nex %= Convert.ToInt32(lcm);
                                       if (nex % 17 == 0)
-                                          mk0.Add(workItem);
+                                          mk0.Add(nex);
                                       else
-                                          mk2.Add(workItem);
+                                          mk2.Add(nex);
                                   }
                                   mk6.RemoveAt(0);
                                   mnk6++;
@@ -237,10 +251,11 @@
                                   else
                                   {
                                       var nex = (workItem + 1) / 3;
+nex %= Convert.ToInt32(lcm);
                                       if (nex % 19 == 0)
-                                          mk6.Add(workItem);
+                                          mk6.Add(nex);
                                       else
-                                          mk0.Add(workItem);
+                                          mk0.Add(nex);
                                   }
                                   mk7.RemoveAt(0);
                                   mnk7++;
@@ -250,6 +265,12 @@
 
                           }
 
+
+                      }
+                      monkeyNum++;
+                  }
+                  catch (System.Exception)
+                  { }
               }
               monkeyNum = 0;
           }
