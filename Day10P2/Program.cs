@@ -1,7 +1,9 @@
-﻿using System;
+using System;
 using System.IO;
+using System.Text;
 class adventCald10p2
 {
+    public static int cycle = 0;
     static void Main(string[] args)
     {
 
@@ -10,58 +12,62 @@ class adventCald10p2
         Console.ForegroundColor = ConsoleColor.White;
         string Add = "addx";
         string Noop = "noop";
-        int cycle = 0;
+        //int cycle = 0;
         int total = 1;
         int addVal = 0;
         int placeHold = 0;
         char[] Screen = new char[240];
-        string file = @"C:\Users\ajwpc\Github\ChristmasAdvent\Day10P1\Input.txt";
+        string file = @"Input.txt";
+        StringBuilder outputBuilder = new();
         Console.WriteLine(File.Exists(file));
+        //StringBuilder outputBuilder = new();
 
         var lines = File.ReadAllLines(file);
 
         foreach (var item in lines)
         {
-            if (item.Contains(Noop))
+
+            outputBuilder = Process(total, outputBuilder);
+
+            if (!item.Contains(Noop))
             {
-                cycle += 1;
-            }
-            if (item.Contains(Add))
-            {
+                outputBuilder = Process(total, outputBuilder);
                 var value = item.Split(' ');
                 addVal = int.Parse(value[1]);
                 total += addVal;
-                cycle += 2;
             }
-            try
-            {
-                if (total <= cycle + 1 && cycle - 1 <= total)
-                {
-                    Screen[cycle] = '#';
-                }
-                else
-                    Screen[cycle] = '.';
-
-                System.Console.WriteLine($"Cycle: {cycle} Total: {total} AddVal: {addVal} PlaceHold: {placeHold} Can Place?:{total + 1 == placeHold || total - 1 == placeHold || total == placeHold}");
-            }
-            catch
 
 
-
-
-            placeHold++;
-            }
-            placeHold = 0;
-            foreach (var item in Screen)
-            {
-                Console.Write(item);
-                if (placeHold % 40 == 0)
-                    System.Console.WriteLine();
-                placeHold++;
-            }
 
 
 
 
         }
+
+        Console.WriteLine(outputBuilder.ToString());
+        }
+
+    static StringBuilder Process(int total, StringBuilder outputBuilder)
+    {
+        if (total - 1 <= cycle && cycle <= total + 1)
+        {
+            outputBuilder.Append("#");
+        }
+        else
+        {
+            outputBuilder.Append(".");
+        }
+
+        cycle+=1;
+
+        if (cycle % 40 == 0)
+        {
+            outputBuilder.AppendLine(); cycle = 0;
+        }
+
+        return outputBuilder;
     }
+
+
+    
+}
