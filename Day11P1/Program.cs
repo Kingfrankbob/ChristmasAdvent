@@ -11,11 +11,7 @@
            Console.BackgroundColor = ConsoleColor.DarkBlue;
          Console.ForegroundColor = ConsoleColor.White;
 
-         string Add = "addx";
-         string Noop = "noop";
-
-         int[,] monkey = new int[8, 20];
-         //  string[] mkNm;
+         int[,] monkey = new int[8, 2];
          int num = 0;
          int counter = 0;
          int monkeyNum = 0;
@@ -48,7 +44,7 @@
             {
                  var mkNM = line.Split(' ');
                  num = int.Parse(mkNM[1].Replace(":", ""));
-                   Console.WriteLine(num);
+//                   Console.WriteLine(num);
                  continue;
              }
 
@@ -81,14 +77,14 @@
          }
 
 
-         for (int i = 0; i < 20; i++) // 20 Rounds
+         for (int i = 0; i < 10000; i++) // 20 Rounds
          {
-             Console.Write("Round: ");
-             Console.WriteLine(i);
+//             Console.Write("Round: ");
+//             Console.WriteLine(i);
              for (int a = 0; a < 8; a++)  //8 Monkeys
              {
-                   Console.Write("Monkey ");
-                   Console.WriteLine(a);
+//                   Console.Write("Monkey ");
+//                   Console.WriteLine(a);
                  try
                  {
                      for (int l = 0; l < 60; l++) // Each possible item
@@ -118,7 +114,9 @@
                                  }
                                  mk0.RemoveAt(0);
                                  mnk0 += 1;
-                                   Console.WriteLine(" Mk {0} interaction", a);
+//                                   Console.WriteLine(" Mk {0} interaction", a);
+if(i == 20) monkey[a, 0] = mnk0;
+if(i == 9999) monkey[a, 1] = mnk0;
                                  break;
 
                              case 1:
@@ -137,7 +135,9 @@ nex %= Convert.ToInt32(lcm);
                                   }
                                   mk1.RemoveAt(0);
                                   mnk1++;
-                                    Console.WriteLine(" Mk {0} interaction", a);
+//                                    Console.WriteLine(" Mk {0} interaction", a);
+if(i == 19) monkey[a, 0] = mnk1;
+if(i == 9999) monkey[a, 1] = mnk1;
 
                                   break;
 
@@ -158,7 +158,9 @@ nex %= Convert.ToInt32(lcm);
                                   }
                                   mk2.RemoveAt(0);
                                   mnk2++;
-                                    Console.WriteLine(" Mk {0} interaction", a);
+//                                    Console.WriteLine(" Mk {0} interaction", a);
+if(i == 19) monkey[a, 0] = mnk2;
+if(i == 9999) monkey[a, 1] = mnk2;
 
                                   break;
 
@@ -178,7 +180,9 @@ nex %= Convert.ToInt32(lcm);
                                   }
                                   mk3.RemoveAt(0);
                                   mnk3++;
-                                    Console.WriteLine(" Mk {0} interaction", a);
+//                                    Console.WriteLine(" Mk {0} interaction", a);
+if(i == 19) monkey[a, 0] = mnk3;
+if(i == 9999) monkey[a, 1] = mnk3;
 
                                   break;
 
@@ -198,7 +202,9 @@ nex %= Convert.ToInt32(lcm);
                                   }
                                   mk4.RemoveAt(0);
                                   mnk4++;
-                                    Console.WriteLine(" Mk {0} interaction", a);
+//                                    Console.WriteLine(" Mk {0} interaction", a);
+if(i == 19) monkey[a, 0] = mnk4;
+if(i == 9999) monkey[a, 1] = mnk4;
 
                                   break;
 
@@ -218,7 +224,9 @@ nex %= Convert.ToInt32(lcm);
                                   }
                                   mk5.RemoveAt(0);
                                   mnk5++;
-                                    Console.WriteLine(" Mk {0} interaction", a);
+//                                    Console.WriteLine(" Mk {0} interaction", a);
+if(i == 19) monkey[a, 0] = mnk5;
+if(i == 9999) monkey[a, 1] = mnk5;
 
                                   break;
 
@@ -238,7 +246,9 @@ nex %= Convert.ToInt32(lcm);
                                   }
                                   mk6.RemoveAt(0);
                                   mnk6++;
-                                    Console.WriteLine(" Mk {0} interaction", a);
+//                                    Console.WriteLine(" Mk {0} interaction", a);
+if(i == 19) monkey[a, 0] = mnk6;
+if(i == 9999) monkey[a, 1] = mnk6;
 
                                   break;
 
@@ -251,7 +261,7 @@ nex %= Convert.ToInt32(lcm);
                                   else
                                   {
                                       var nex = (workItem + 1) / 3;
-nex %= Convert.ToInt32(lcm);
+					nex %= Convert.ToInt32(lcm);
                                       if (nex % 19 == 0)
                                           mk6.Add(nex);
                                       else
@@ -259,7 +269,9 @@ nex %= Convert.ToInt32(lcm);
                                   }
                                   mk7.RemoveAt(0);
                                   mnk7++;
-                                    Console.WriteLine(" Mk {0} interaction", a);
+//                                    Console.WriteLine(" Mk {0} interaction", a);
+if(i == 19) monkey[a, 0] = mnk7;
+if(i == 9999) monkey[a, 1] = mnk7;
 
                                   break;
 
@@ -278,7 +290,7 @@ nex %= Convert.ToInt32(lcm);
 
 
 
-
+/*
           counter = 0;
           for (int i = 0; i < 8; i++)
           {
@@ -359,6 +371,29 @@ nex %= Convert.ToInt32(lcm);
               }
 
           }
+*/
+
+Console.WriteLine();
+Console.WriteLine();
+counter = 0;
+
+List<long> All = new List<long>() {};
+
+foreach(var item in monkey)
+{
+//All Commented here are Debug Purposes
+// Console.Write(item);
+// Console.Write(", ");
+All.Add(Convert.ToInt64(item));
+// counter++;
+
+// if(counter % 2 == 0) Console.WriteLine();
+
+}
+All.Sort();
+All.Reverse();
+Console.WriteLine("TotalMonkey Biz of  20 Rounds: {0}", (5));
+
 
 
 
