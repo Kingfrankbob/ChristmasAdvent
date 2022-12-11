@@ -26,7 +26,7 @@ class adventCald10p1
         int total = 1;
         int addVal = 0;
         int grandTotal = 0;
-        string file = @"C:\Users\ajwpc\Github\ChristmasAdvent\Input.txt";
+        string file = @"Input.txt";
         Console.WriteLine(File.Exists(file));
 
         var lines = File.ReadAllLines(file);
