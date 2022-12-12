@@ -66,8 +66,8 @@ class adventCald10p1
             var group = new string[3];
             for (int i = groupCount - 3; i < groupCount; i++)
             {
-                System.Console.WriteLine("Current Selected Number: " + groupCount + " Current Index: " + i + " Current Group Count: " + lines[groupCount]);
-                group[i - (groupCount - 3)] = lines[groupCount];
+                System.Console.WriteLine("Current Selected Number: " + groupCount + " Current Index: " + i - groupCount + " Current Group Count: " + lines[i]);
+                group[i - (groupCount)] = lines[i];
             }
 
 
