@@ -18,7 +18,7 @@ class adventCald10p1
 
         var lines = File.ReadAllLines(file);
 
-        foreach (var line in lines)
+        foreach (var line in lines) //  X lose, Y draw, and Z win. Good luck!"
         {
             var contest = line.Split(' ');
             var test1 = contest[0];
@@ -26,36 +26,43 @@ class adventCald10p1
 
             if (test1 == "C" && test2 == "Z")
             {
-                totalPoints += 6;
+                totalPoints += 7;
+                // Scissors = 3 = C,Z  Paper = 2 = Y,B  Rock = 1 = X,A
             }
             else if (test1 == "C" && test2 == "Y")
             {
-                totalPoints += 2;
+                totalPoints += 6;
             }
             else if (test1 == "C" && test2 == "X")
             {
-                totalPoints += 7;
+                totalPoints += 2;
             }
+
+
             else if (test1 == "A" && test2 == "Z")
             {
-                totalPoints += 3;
+                totalPoints += 8;
             }
             else if (test1 == "A" && test2 == "Y")
             {
-                // Sciscors = C,Z  Paper = Y,B  Rock = X,A
-                totalPoints += 8;
+                // Scissors = C,Z  Paper = Y,B  Rock = X,A
+                //  X lose, Y draw, and Z win. Good luck!"
+                totalPoints += 4;
             }
             else if (test1 == "A" && test2 == "X")
             {
-                totalPoints += 4;
+                totalPoints += 3;
             }
+
+
             else if (test1 == "B" && test2 == "Z")
             {
                 totalPoints += 9;
             }
             else if (test1 == "B" && test2 == "Y")
             {
-                // Sciscors = C,Z  Paper = Y,B  Rock = X,A
+                // Scissors = C,Z  Paper = Y,B  Rock = X,A
+                //  X lose, Y draw, and Z win. Good luck!"
                 totalPoints += 5;
             }
             else if (test1 == "B" && test2 == "X")
