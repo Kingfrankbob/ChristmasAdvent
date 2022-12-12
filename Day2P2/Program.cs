@@ -10,7 +10,7 @@ class adventCald10p1
         long totalPoints = 0;
         Console.Clear();
         Console.BackgroundColor = ConsoleColor.Black;
-        Console.ForegroundColor = ConsoleColor.White;
+        Console.ForegroundColor = ConsoleColor.Gray;
         string file = @"Input.txt";
         Console.WriteLine(File.Exists(file));
 
