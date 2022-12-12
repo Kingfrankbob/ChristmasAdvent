@@ -8,7 +8,7 @@ class adventCald10p1
     static void Main(string[] args)
     {
         char[] same = new char[300];
-        char[] alphabet = new char[52]('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
+        char[] alphabet = new char[52] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
         long totalPoints = 0;
         int[] sameCount = new int[300];
         Console.Clear();
@@ -38,15 +38,17 @@ class adventCald10p1
 
         }
 
+        counter = 0;
         foreach (var item in same)
         {
-            for (int i = 0; i < 52; i++)
+            foreach (var lttr in alphabet)
             {
-                if (item == alphabet[i])
+                if (item == lttr)
                 {
-                    sameCount[i] = alphabet[i];
+                    sameCount[counter] = Array.IndexOf(alphabet, lttr) + 1;
                 }
             }
+            counter++;
         }
 
         foreach (var item in sameCount)
@@ -54,6 +56,22 @@ class adventCald10p1
             totalPoints += item;
         }
 
+        System.Console.WriteLine("Total Points: " + totalPoints);
+
+        int groupCount = 0;
+
+        while (!(groupCount > 300))
+        {
+            groupCount += 3;
+            var group = new string[3];
+            for (int i = groupCount - 3; i < groupCount; i++)
+            {
+                System.Console.WriteLine("Current Selected Number: " + groupCount + " Current Index: " + i + " Current Group Count: " + lines[groupCount]);
+                group[i - (groupCount - 3)] = lines[groupCount];
+            }
+
+
+        }
 
 
 
