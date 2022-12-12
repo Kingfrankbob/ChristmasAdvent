@@ -32,7 +32,7 @@ class adventCald10p2
         List<int> mk5 = new List<int>() { };
         List<int> mk6 = new List<int>() { };
         List<int> mk7 = new List<int>() { };
-        string file = @"C:\Users\cragu\Downloads\ChristmasAdvent-master\ChristmasAdvent-master\Day11P1\Input.txt";
+        string file = @"MyInputPath";
 
         Console.WriteLine(File.Exists(file));
 
