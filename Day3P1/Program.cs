@@ -59,19 +59,37 @@ class adventCald10p1
         System.Console.WriteLine("Total Points: " + totalPoints);
 
         int groupCount = 0;
+        totalPoints = 0;
 
-        while (!(groupCount > 300))
+        while ((groupCount <= 300))
         {
             groupCount += 3;
-            var group = new string[3];
-            for (int i = groupCount - 3; i < groupCount; i++)
+            System.Console.WriteLine("gROUP ADd");
+            if (groupCount > 300)
             {
-                System.Console.WriteLine("Current Selected Number: " + groupCount + " Current Index: " + i - groupCount + " Current Group Count: " + lines[i]);
-                group[i - (groupCount)] = lines[i];
+                break;
             }
 
+            var group = new string[3];
 
+            for (int i = groupCount - 3; i < groupCount; i++)
+            {
+                // System.Console.WriteLine("Current Selected Number: " + groupCount + " Current Index: " + (i - (groupCount - 3)) + " Current Group Count: " + lines[i]);
+                group[i - (groupCount - 3)] = lines[i];
+            }
+
+            foreach (var item in group[0])
+            {
+                System.Console.WriteLine("XhR CHECK");
+                if (group[1].Contains(item) && group[2].Contains(item))
+                {
+                    totalPoints += Array.IndexOf(alphabet, item) + 1;
+                }
+            }
         }
+        System.Console.WriteLine("Total Points: " + totalPoints);
+
+        // 2838 is goal
 
 
 
