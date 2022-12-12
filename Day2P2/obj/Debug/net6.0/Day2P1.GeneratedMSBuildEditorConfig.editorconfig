@@ -6,5 +6,5 @@ build_property.ProjectTypeGuids =
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = ChristmasAdvent
-build_property.ProjectDir = c:\Users\ajwpc\Github\ChristmasAdvent\Day10P1\
+build_property.RootNamespace = Day2P1
+build_property.ProjectDir = C:\Users\ajwpc\Github\ChristmasAdvent\Day2P1\

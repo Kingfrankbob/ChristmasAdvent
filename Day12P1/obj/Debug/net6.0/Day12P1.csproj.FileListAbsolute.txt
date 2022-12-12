@@ -1,0 +1,15 @@
+C:\Users\ajwpc\Github\ChristmasAdvent\Day12P1\bin\Debug\net6.0\Day12P1.exe
+C:\Users\ajwpc\Github\ChristmasAdvent\Day12P1\bin\Debug\net6.0\Day12P1.deps.json
+C:\Users\ajwpc\Github\ChristmasAdvent\Day12P1\bin\Debug\net6.0\Day12P1.runtimeconfig.json
+C:\Users\ajwpc\Github\ChristmasAdvent\Day12P1\bin\Debug\net6.0\Day12P1.dll
+C:\Users\ajwpc\Github\ChristmasAdvent\Day12P1\bin\Debug\net6.0\Day12P1.pdb
+C:\Users\ajwpc\Github\ChristmasAdvent\Day12P1\obj\Debug\net6.0\Day12P1.csproj.AssemblyReference.cache
+C:\Users\ajwpc\Github\ChristmasAdvent\Day12P1\obj\Debug\net6.0\Day12P1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ajwpc\Github\ChristmasAdvent\Day12P1\obj\Debug\net6.0\Day12P1.AssemblyInfoInputs.cache
+C:\Users\ajwpc\Github\ChristmasAdvent\Day12P1\obj\Debug\net6.0\Day12P1.AssemblyInfo.cs
+C:\Users\ajwpc\Github\ChristmasAdvent\Day12P1\obj\Debug\net6.0\Day12P1.csproj.CoreCompileInputs.cache
+C:\Users\ajwpc\Github\ChristmasAdvent\Day12P1\obj\Debug\net6.0\Day12P1.dll
+C:\Users\ajwpc\Github\ChristmasAdvent\Day12P1\obj\Debug\net6.0\refint\Day12P1.dll
+C:\Users\ajwpc\Github\ChristmasAdvent\Day12P1\obj\Debug\net6.0\Day12P1.pdb
+C:\Users\ajwpc\Github\ChristmasAdvent\Day12P1\obj\Debug\net6.0\Day12P1.genruntimeconfig.cache
+C:\Users\ajwpc\Github\ChristmasAdvent\Day12P1\obj\Debug\net6.0\ref\Day12P1.dll
