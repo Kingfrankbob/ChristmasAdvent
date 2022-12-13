@@ -31,6 +31,8 @@ namespace Day13
 
             System.Console.WriteLine("2 and 6 Together: " + ((newData.IndexOf("[[2]]") + 1) * (newData.IndexOf("[[6]]") + 1)));
 
+            //Based off of Brad Wilson's Solution Sorter
+
         }
 
     }
