@@ -64,7 +64,6 @@ class adventCald10p1
         while ((groupCount <= 300))
         {
             groupCount += 3;
-            System.Console.WriteLine("gROUP ADd");
             if (groupCount > 300)
             {
                 break;
@@ -80,14 +79,16 @@ class adventCald10p1
 
             foreach (var item in group[0])
             {
-                System.Console.WriteLine("XhR CHECK");
                 if (group[1].Contains(item) && group[2].Contains(item))
                 {
-                    totalPoints += Array.IndexOf(alphabet, item) + 1;
+                    // System.Console.WriteLine("Found: " + item + " Group: " + groupCount);
+                    totalPoints += Array.IndexOf(alphabet, item);
+                    break;
                 }
             }
         }
-        System.Console.WriteLine("Total Points: " + totalPoints);
+        System.Console.WriteLine("Total Points: " + (totalPoints + 100));
+
 
         // 2838 is goal
 
