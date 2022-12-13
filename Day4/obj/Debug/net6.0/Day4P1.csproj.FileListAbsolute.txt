@@ -1,0 +1,15 @@
+C:\Users\ajwpc\Github\ChristmasAdvent\Day4P1\obj\Debug\net6.0\Day4P1.csproj.AssemblyReference.cache
+C:\Users\ajwpc\Github\ChristmasAdvent\Day4P1\obj\Debug\net6.0\Day4P1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ajwpc\Github\ChristmasAdvent\Day4P1\obj\Debug\net6.0\Day4P1.AssemblyInfoInputs.cache
+C:\Users\ajwpc\Github\ChristmasAdvent\Day4P1\obj\Debug\net6.0\Day4P1.AssemblyInfo.cs
+C:\Users\ajwpc\Github\ChristmasAdvent\Day4P1\obj\Debug\net6.0\Day4P1.csproj.CoreCompileInputs.cache
+C:\Users\ajwpc\Github\ChristmasAdvent\Day4P1\bin\Debug\net6.0\Day4P1.exe
+C:\Users\ajwpc\Github\ChristmasAdvent\Day4P1\bin\Debug\net6.0\Day4P1.deps.json
+C:\Users\ajwpc\Github\ChristmasAdvent\Day4P1\bin\Debug\net6.0\Day4P1.runtimeconfig.json
+C:\Users\ajwpc\Github\ChristmasAdvent\Day4P1\bin\Debug\net6.0\Day4P1.dll
+C:\Users\ajwpc\Github\ChristmasAdvent\Day4P1\bin\Debug\net6.0\Day4P1.pdb
+C:\Users\ajwpc\Github\ChristmasAdvent\Day4P1\obj\Debug\net6.0\Day4P1.dll
+C:\Users\ajwpc\Github\ChristmasAdvent\Day4P1\obj\Debug\net6.0\refint\Day4P1.dll
+C:\Users\ajwpc\Github\ChristmasAdvent\Day4P1\obj\Debug\net6.0\Day4P1.pdb
+C:\Users\ajwpc\Github\ChristmasAdvent\Day4P1\obj\Debug\net6.0\Day4P1.genruntimeconfig.cache
+C:\Users\ajwpc\Github\ChristmasAdvent\Day4P1\obj\Debug\net6.0\ref\Day4P1.dll
