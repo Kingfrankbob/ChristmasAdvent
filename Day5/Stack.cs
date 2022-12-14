@@ -11,10 +11,6 @@ namespace Day5
         private List<char> _stack = new List<char>();
         public void Push(char obj)
         {
-            if (obj == null)
-            {
-                throw new InvalidOperationException("Null is not allowed");
-            }
             _stack.Add(obj);
         }
         public char Pop()

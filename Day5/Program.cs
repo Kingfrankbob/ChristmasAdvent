@@ -213,7 +213,6 @@
                     var targetStack = moveFromStack[0];
                     var targetToStack = moveFromStack[1];
 
-
                     var target = stackList[Int32.Parse(targetToStack) - 1];
                     var source = stackList[Int32.Parse(targetStack) - 1];
 
@@ -224,14 +223,14 @@
 
                     if ((Int32.Parse(targetAmount) > 1))
                     {
+                        var tempStack = new Stack();
                         for (int i = 0; i < Int32.Parse(targetAmount); i++)
                         {
-                            stackCheck[i] = source.Pop();
+                            tempStack.Push(source.Pop());
                         }
-                        var pushes = stackCheck.Reverse();
-                        foreach (var item in pushes)
+                        for (int i = 0; i < Int32.Parse(targetAmount); i++)
                         {
-                            target.Push(item);
+                            target.Push(tempStack.Pop());
                         }
                     }
 
