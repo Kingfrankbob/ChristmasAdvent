@@ -1,7 +1,18 @@
 ﻿// using System.Text;
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
 namespace Day14
 {
-    class uniqueFinder
+
+    /*
+    SO MUCH THANKS TO BARD WILSON FOR THE HELP WITH THIS ONE!
+    Or at least the reference! I was able to figure out the rest on my own!
+    I had the mapping close with Github Copilot, the link to brads repo is here:
+    https://github.com/bradwilson/advent-2022/blob/main/Day14/Program.cs
+    */
+    class sandDumper
     {
 
         static void Main(string[] args)
@@ -9,109 +20,138 @@ namespace Day14
             Console.Clear();
             string file = @"Input.txt";
             Console.WriteLine("File Exists? " + File.Exists(file));
-            var lines = File.ReadAllLines(file);
-            char[,] canvas = new char[100, 200];
-            int counter = 0;
-            int lineCounter = 0;
+            var lines = (from line in File.ReadAllLines("Input.txt") where !string.IsNullOrWhiteSpace(line) select line.Split(" -> ").Select(x => x.Split(",").Select(int.Parse).ToArray()).ToArray()).ToArray();
+            // int counter = 0;
 
-            var prevx = 0;
-            var prevy = 0;
+            var curPnt = (0, 0);
 
             int minx = 999, miny = 999, maxx = 0, maxy = 0;
 
-            foreach (var line in lines)
+            foreach (var coords in lines)
             {
-                var points = line.Split(" -> ");
-
-
-                foreach (var point in points)
+                foreach (var coord in coords)
                 {
-                    if (counter != 0)
+                    if (coord[0] < minx) minx = coord[0];
+                    if (coord[1] < miny) miny = coord[1];
+                    if (coord[0] > maxx) maxx = coord[0];
+                    if (coord[1] > maxy) maxy = coord[1];
+                }
+
+            }
+
+            System.Console.WriteLine("minx: " + minx + " miny: " + miny + " maxx: " + maxx + " maxy: " + maxy);
+
+
+            var caveMap = new Occupant[maxx - minx + 1, maxy + 1];
+
+            var maxy2 = maxy + 2;
+            var minx2 = Math.Min(minx, 500 - maxy2);
+            var maxx2 = Math.Max(maxx, 500 + maxy2);
+            var caveMapP2 = new Occupant[maxx2 - minx2 + 1, maxy2 + 1];
+
+
+            foreach (var coords in lines)
+            {
+                curPnt = (coords[0][0], coords[0][1]);
+                caveMap[curPnt.Item1 - minx, curPnt.Item2] = Occupant.Rock;
+                caveMapP2[curPnt.Item1 - minx2, curPnt.Item2] = Occupant.Rock;
+
+                for (int i = 0; i < coords.Length; i++)
+                {
+                    var nextPnt = (coords[i][0], coords[i][1]);
+
+                    var dirX = Math.Min(1, Math.Max(-1, nextPnt.Item1 - curPnt.Item1));
+                    var dirY = Math.Min(1, Math.Max(-1, nextPnt.Item2 - curPnt.Item2));
+
+                    while (curPnt != nextPnt)
                     {
-                        var xy = point.Split(',');
-                        var x = int.Parse(xy[0]) - 460;
-                        var y = int.Parse(xy[1]) - 10;
+                        curPnt.Item1 += dirX;
+                        curPnt.Item2 += dirY;
+                        caveMap[curPnt.Item1 - minx, curPnt.Item2] = Occupant.Rock;
+                        caveMapP2[curPnt.Item1 - minx2, curPnt.Item2] = Occupant.Rock;
+                    }
+                    curPnt = nextPnt;
+                }
 
-                        var xdiff = x - prevx;
-                        var ydiff = y - prevy;
 
-                        System.Console.WriteLine("line: " + lineCounter + " x: " + x + " y: " + y + " prevx: " + prevx + " prevy: " + prevy + " xdiff: " + xdiff + " ydiff: " + ydiff);
+            }
 
-                        //Graph from prevx,prevy to x,y
-                        if (xdiff == 0)
+            for (var x = minx2; x <= maxx2; ++x)
+                caveMapP2[x - minx2, maxy2] = Occupant.Rock;
+
+
+
+            long FillCave(Occupant[,] cave, int minX, int maxX, int maxY)
+            {
+                var result = 0L;
+                bool finished = false;
+
+                while (!finished)
+                {
+                    var currentSand = (500, 0);
+
+                    while (true)
+                    {
+                        if (cave[currentSand.Item1 - minX, currentSand.Item2] == Occupant.Sand)
                         {
-                            if (ydiff > 0)
-                            {
-                                for (int i = prevy; i <= y; i++)
-                                {
-                                    canvas[prevx, i] = '#';
-                                }
-                            }
-                            else
-                            {
-                                for (int i = y; i <= prevy; i++)
-                                {
-                                    canvas[prevx, i] = '#';
-                                }
-                            }
+                            finished = true;
+                            break;
                         }
-                        else if (ydiff == 0)
+                        if (currentSand.Item2 >= maxY)
                         {
-                            if (xdiff > 0)
-                            {
-                                for (int i = prevx; i <= x; i++)
-                                {
-                                    canvas[i, prevy] = '#';
-                                }
-                            }
-                            else
-                            {
-                                for (int i = x; i <= prevx; i++)
-                                {
-                                    canvas[i, prevy] = '#';
-                                }
-                            }
+                            finished = true;
+                            break;
                         }
+                        if (cave[currentSand.Item1 - minX, currentSand.Item2 + 1] == Occupant.Empty)
+                            currentSand.Item2++;
                         else
                         {
-                            System.Console.WriteLine("Error");
+                            if (currentSand.Item1 <= minX)
+                            {
+                                finished = true;
+                                break;
+                            }
+                            if (cave[currentSand.Item1 - minX - 1, currentSand.Item2 + 1] == Occupant.Empty)
+                            {
+                                currentSand.Item2++;
+                                currentSand.Item1--;
+                            }
+                            else
+                            {
+                                if (currentSand.Item1 >= maxX)
+                                {
+                                    finished = true;
+                                    break;
+                                }
+
+                                if (cave[currentSand.Item1 - minX + 1, currentSand.Item2 + 1] == Occupant.Empty)
+                                {
+                                    currentSand.Item2++;
+                                    currentSand.Item1++;
+                                }
+                                else
+                                    break;
+                            }
                         }
-
                     }
-                    var xxy = point.Split(',');
-                    var xx = int.Parse(xxy[0]) - 460;
-                    var yx = int.Parse(xxy[1]) - 10;
-                    prevx = xx;
-                    prevy = yx;
-                    if (counter != 0)
+
+                    if (!finished)
                     {
-                        if (prevx < minx) minx = prevx;
-                        if (prevx > maxx) maxx = prevx;
-                        if (prevy < miny) miny = prevy;
-                        if (prevy > maxy) maxy = prevy;
+                        cave[currentSand.Item1 - minX, currentSand.Item2] = Occupant.Sand;
+                        result++;
                     }
-
-                    counter++;
                 }
-                counter = 0;
-                lineCounter++;
 
-
+                return result;
             }
-            counter = 0;
 
             // System.Console.WriteLine("minx: " + minx + " miny: " + miny + " maxx: " + maxx + " maxy: " + maxy);
+            System.Console.WriteLine("Result: " + FillCave(caveMap, minx, maxx, maxy) + " Result2: " + FillCave(caveMapP2, minx2, maxx2, maxy2));
 
-
-            foreach (var item in canvas)
-            {
-                if (item != '#') System.Console.Write('.');
-                else System.Console.Write(item);
-
-                if (counter % 100 == 0) System.Console.WriteLine("/n");
-                counter++;
-            }
 
         }
     }
 }
+
+enum Occupant { Empty = 0, Rock, Sand };
+
