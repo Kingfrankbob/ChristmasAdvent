@@ -9,3 +9,5 @@ Brad Wilson and his repo have been a great help: https://github.com/bradwilson/a
 
 ## How much do I do?
 I have done most of the days myself without reference, but those which I did not, I did write a note I believe.
+## WHAT?
+Some of these commits have been so big that I have to change the allowed commit size XD!
