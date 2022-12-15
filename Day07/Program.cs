@@ -21,6 +21,7 @@ namespace Day7
             string? cPath = null;
             Folder? cFolder = null;
             var fStack = new Stack<string>();
+            var sysTot = 0L;
 
             foreach (var line in lines)
             {
@@ -43,27 +44,68 @@ namespace Day7
                         folders.Add(cPath, cFolder);
                     }
                 }
-                else if (!line.StartsWith("$ ls") || !line.StartsWith("dir "))
+                else if (line == "$ ls")
                 {
-                    System.Console.WriteLine(line);
+
+                }
+                else if (line.StartsWith("dir "))
+                {
+
+                }
+                else
+                {
                     var pieces = line.Split(' ');
                     var size = long.Parse(pieces[0]);
                     cFolder!.fileSize += size;
                 }
 
             }
+
             var resSize = 0L;
             foreach (var folder in folders.Values)
             {
-                Console.WriteLine(folder.Name + " " + folder.fileSizeCheck(folders));
+                // Console.WriteLine(folder.Name + " Size ->" + folder.fileSizeCheck(folders));
                 if (folder.fileSizeCheck(folders) <= 100000)
                 {
                     resSize += folder.fileSizeCheck(folders);
+                }
+                if (folder.Name == "/")
+                {
+                    sysTot = folder.fileSizeCheck(folders);
                 }
             }
 
             System.Console.WriteLine("Total Size: " + resSize + " bytes");
 
+            System.Console.WriteLine("System Size: " + sysTot + " bytes");
+
+            var toClear = 30000000 - (70000000 - sysTot);
+
+            System.Console.WriteLine("To Clear: " + toClear + " bytes");
+
+            var smolList = new List<long>();
+
+            foreach (var folder in folders.Values)
+            {
+                if (folder.fileSizeCheck(folders) == toClear)
+                {
+                    Console.WriteLine(folder.Name + " Size ->" + folder.fileSizeCheck(folders));
+                }
+                else if (1000000 > folder.fileSizeCheck(folders) && folder.fileSizeCheck(folders) > toClear)
+                {
+                    // Console.WriteLine(folder.Name + " Size ->" + folder.fileSizeCheck(folders) + " Close Number:" + (folder.fileSizeCheck(folders) - toClear));
+                    smolList.Add(folder.fileSizeCheck(folders) - toClear);
+                }
+                else
+                {
+
+                }
+            }
+
+            var target = smolList.Min();
+            var targetFolder = folders.Values.Where(x => x.fileSizeCheck(folders) == (toClear + target)).First();
+
+            Console.WriteLine(targetFolder.Name + " Size ->" + targetFolder.fileSizeCheck(folders) + " Close Number:" + (targetFolder.fileSizeCheck(folders) - toClear));
 
 
         }
