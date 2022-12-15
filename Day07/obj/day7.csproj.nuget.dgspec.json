@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ajwpc\\Github\\ChristmasAdvent\\day7\\day7.csproj": {}
+    "C:\\Users\\ajwpc\\Github\\ChristmasAdvent\\Day07\\day7.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ajwpc\\Github\\ChristmasAdvent\\day7\\day7.csproj": {
+    "C:\\Users\\ajwpc\\Github\\ChristmasAdvent\\Day07\\day7.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ajwpc\\Github\\ChristmasAdvent\\day7\\day7.csproj",
+        "projectUniqueName": "C:\\Users\\ajwpc\\Github\\ChristmasAdvent\\Day07\\day7.csproj",
         "projectName": "day7",
-        "projectPath": "C:\\Users\\ajwpc\\Github\\ChristmasAdvent\\day7\\day7.csproj",
+        "projectPath": "C:\\Users\\ajwpc\\Github\\ChristmasAdvent\\Day07\\day7.csproj",
         "packagesPath": "C:\\Users\\ajwpc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ajwpc\\Github\\ChristmasAdvent\\day7\\obj\\",
+        "outputPath": "C:\\Users\\ajwpc\\Github\\ChristmasAdvent\\Day07\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
