@@ -1,0 +1,15 @@
+C:\Users\ajwpc\Github\ChristmasAdvent\Day15\bin\Debug\net7.0\Day15.exe
+C:\Users\ajwpc\Github\ChristmasAdvent\Day15\bin\Debug\net7.0\Day15.deps.json
+C:\Users\ajwpc\Github\ChristmasAdvent\Day15\bin\Debug\net7.0\Day15.runtimeconfig.json
+C:\Users\ajwpc\Github\ChristmasAdvent\Day15\bin\Debug\net7.0\Day15.dll
+C:\Users\ajwpc\Github\ChristmasAdvent\Day15\bin\Debug\net7.0\Day15.pdb
+C:\Users\ajwpc\Github\ChristmasAdvent\Day15\obj\Debug\net7.0\Day15.csproj.AssemblyReference.cache
+C:\Users\ajwpc\Github\ChristmasAdvent\Day15\obj\Debug\net7.0\Day15.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ajwpc\Github\ChristmasAdvent\Day15\obj\Debug\net7.0\Day15.AssemblyInfoInputs.cache
+C:\Users\ajwpc\Github\ChristmasAdvent\Day15\obj\Debug\net7.0\Day15.AssemblyInfo.cs
+C:\Users\ajwpc\Github\ChristmasAdvent\Day15\obj\Debug\net7.0\Day15.csproj.CoreCompileInputs.cache
+C:\Users\ajwpc\Github\ChristmasAdvent\Day15\obj\Debug\net7.0\Day15.dll
+C:\Users\ajwpc\Github\ChristmasAdvent\Day15\obj\Debug\net7.0\refint\Day15.dll
+C:\Users\ajwpc\Github\ChristmasAdvent\Day15\obj\Debug\net7.0\Day15.pdb
+C:\Users\ajwpc\Github\ChristmasAdvent\Day15\obj\Debug\net7.0\Day15.genruntimeconfig.cache
+C:\Users\ajwpc\Github\ChristmasAdvent\Day15\obj\Debug\net7.0\ref\Day15.dll
