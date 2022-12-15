@@ -1,9 +1,13 @@
 # ChristmasAdvent
 ## Days Im not doing
-Day 12: 
-### Why?
+### Day 12: 
+#### Why?
 It involves the implementation of a Dijkstra Algorithm, which I do not have enough time to implement in c#.
 OOF DO NOT RUN 12 as of 12/14/2022 IT WILL ONLY CONSUME MEM AND NOTHING HAPPENS!
+### Day 8 P2
+#### Why?
+I cannot get it to work no matter what I do. I even tried to mod it like Brad Wilson and still no luck xd.
+
 
 ## Credits
 Brad Wilson and his repo have been a great help: https://github.com/bradwilson/advent-2022/blob/main/day13/Program.cs (I have not used his in most of them!)
