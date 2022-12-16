@@ -7,6 +7,10 @@ OOF DO NOT RUN 12 as of 12/14/2022 IT WILL ONLY CONSUME MEM AND NOTHING HAPPENS!
 ### Day 8 P2
 #### Why?
 I cannot get it to work no matter what I do. I even tried to mod it like Brad Wilson and still no luck xd.
+### Day 16
+#### Why?
+Well I was on ths stream with brad, and it was not working; plus using his method (currently working) it took 15 min. to find the correct path.
+I did help a bit ig, giving ideas but other than that I do not know how to do such things
 
 
 ## Credits
