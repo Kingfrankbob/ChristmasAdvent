@@ -2,74 +2,77 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;   // NNED TEST ON BETTER COMPUTER XDD
+using System.Linq;
 
-var stopwatch = Stopwatch.StartNew();
-
-var data =
-    (from line in File.ReadAllLines("input.txt")
-     where !string.IsNullOrWhiteSpace(line)
-     select line.ToArray()).ToArray();
-
-var start = (x: -1, y: -1);
-var end = (x: -1, y: -1);
-
-for (int x = 0; x < data.Length; ++x)
-    for (int y = 0; y < data[0].Length; ++y)
-    {
-        if (data[x][y] == 'S')
-        {
-            start = (x, y);
-            data[x][y] = 'a';
-        }
-
-        if (data[x][y] == 'E')
-        {
-            end = (x, y);
-            data[x][y] = 'z';
-        }
-    }
-
-var queue = new Queue<(int x, int y, int steps)>();
-queue.Enqueue((start.x, start.y, 0));
-
-var visited = new HashSet<(int x, int y)>();
-visited.Add((start.x, start.y));
-
-while (queue.Count > 0)
+namespace Day12
 {
-    var (x, y, steps) = queue.Dequeue();
-
-    if (data[x][y] == 'z')
+    class hillClimbAlg
     {
-        Console.WriteLine($"Found end in {steps} steps");
-        break;
-    }
+        static void Main(string[] args)
+        {
+            Console.Clear();
+            string file = @"Input.txt";
+            Console.WriteLine("File Exists? " + File.Exists(file));
+            var lines = ((from line in File.ReadAllLines(file) select line.ToCharArray()).ToArray());
 
-    if (data[x][y] != 'a' && data[x][y] != 'z')
-    {
-        var nextLetter = (char)(data[x][y] + 1);
-        for (int i = 0; i < data.Length; ++i)
-            for (int j = 0; j < data[0].Length; ++j)
-                if (data[i][j] == nextLetter)
+            var start = (x: -1, y: -1);
+            var end = (x: -1, y: -1);
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                for (int j = 0; j < lines[0].Length; j++)
                 {
-                    queue.Enqueue((i, j, steps + 1));
-                    visited.Add((i, j));
+                    if (lines[i][j] == 'S')
+                    {
+                        start = (i, j);
+                        lines[i][j] = 'a';
+                    }
+                    else if (lines[i][j] == 'E')
+                    {
+                        end = (i, j);
+                        lines[i][i] = 'z';
+                    }
                 }
+            }
+
+            Dictionary<(int x, int y), int> distanceCache = new() { { end, 0 } }; // Distance cache
+
+            void calcAround(int x, int y)
+            {
+                if (!distanceCache.TryGetValue((x, y), out int curVal))
+                    throw new InvalidOperationException($"Cannot find Cost");
+
+                void neighborCost(int nextX, int nextY)
+                {
+                    if (nextX < 0 || nextX >= lines.Length || nextY < 0 || nextY >= lines[0].Length)
+                        return;
+
+                    if (lines[nextX][nextY] + 1 >= lines[x][y])
+                    {
+                        if (!distanceCache.TryGetValue((nextX, nextY), out var currentNeighborCost) || currentNeighborCost > curVal + 1)
+                        {
+                            distanceCache[(nextX, nextY)] = curVal + 1;
+                            calcAround(nextX, nextY);
+                            System.Console.WriteLine("Distance: " + distanceCache[(start.x, start.y)] + " " + nextX + " " + nextY + "cCost: " +  currentNeighborCost);
+                        }
+                    }
+
+                    neighborCost(nextX, nextY - 1);
+                    neighborCost(nextX, nextY + 1);
+                    neighborCost(nextX - 1, nextY);
+                    neighborCost(nextX + 1, nextY);
+
+                }
+            }
+
+            calcAround(end.x, end.y);
+
+            System.Console.WriteLine("Total Distance: " + distanceCache[(start.x, start.y)]);
+
+        }
+
+
     }
-
-    if (x > 0 && data[x - 1][y] != '#' && !visited.Contains((x - 1, y)))
-        queue.Enqueue((x - 1, y, steps + 1));
-
-    if (x < data.Length - 1 && data[x + 1][y] != '#' && !visited.Contains((x + 1, y)))
-        queue.Enqueue((x + 1, y, steps + 1));
-
-    if (y > 0 && data[x][y - 1] != '#' && !visited.Contains((x, y - 1)))
-        queue.Enqueue((x, y - 1, steps + 1));
-
-    if (y < data[0].Length - 1 && data[x][y + 1] != '#' && !visited.Contains((x, y + 1)))
-        queue.Enqueue((x, y + 1, steps + 1));
 }
 
-stopwatch.Stop();
-Console.WriteLine($"Took {stopwatch.ElapsedMilliseconds}ms");
+
