@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-
-namespace Day12
+﻿namespace Day12
 {
     class hillClimbAlg
     {
