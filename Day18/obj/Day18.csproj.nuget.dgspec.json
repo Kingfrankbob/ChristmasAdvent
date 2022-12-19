@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ChristmasAdvent-master\\Day17\\Day17.csproj": {}
+    "E:\\ChristmasAdvent-master\\Day18\\Day18.csproj": {}
   },
   "projects": {
-    "E:\\ChristmasAdvent-master\\Day17\\Day17.csproj": {
+    "E:\\ChristmasAdvent-master\\Day18\\Day18.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ChristmasAdvent-master\\Day17\\Day17.csproj",
-        "projectName": "Day17",
-        "projectPath": "E:\\ChristmasAdvent-master\\Day17\\Day17.csproj",
+        "projectUniqueName": "E:\\ChristmasAdvent-master\\Day18\\Day18.csproj",
+        "projectName": "Day18",
+        "projectPath": "E:\\ChristmasAdvent-master\\Day18\\Day18.csproj",
         "packagesPath": "C:\\Users\\KingQueen\\.nuget\\packages\\",
-        "outputPath": "E:\\ChristmasAdvent-master\\Day17\\obj\\",
+        "outputPath": "E:\\ChristmasAdvent-master\\Day18\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\KingQueen\\AppData\\Roaming\\NuGet\\NuGet.Config"

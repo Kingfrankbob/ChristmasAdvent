@@ -1,0 +1,15 @@
+E:\ChristmasAdvent-master\Day18\obj\Debug\net7.0\Day18.csproj.AssemblyReference.cache
+E:\ChristmasAdvent-master\Day18\obj\Debug\net7.0\Day18.GeneratedMSBuildEditorConfig.editorconfig
+E:\ChristmasAdvent-master\Day18\obj\Debug\net7.0\Day18.AssemblyInfoInputs.cache
+E:\ChristmasAdvent-master\Day18\obj\Debug\net7.0\Day18.AssemblyInfo.cs
+E:\ChristmasAdvent-master\Day18\obj\Debug\net7.0\Day18.csproj.CoreCompileInputs.cache
+E:\ChristmasAdvent-master\Day18\bin\Debug\net7.0\Day18.exe
+E:\ChristmasAdvent-master\Day18\bin\Debug\net7.0\Day18.deps.json
+E:\ChristmasAdvent-master\Day18\bin\Debug\net7.0\Day18.runtimeconfig.json
+E:\ChristmasAdvent-master\Day18\bin\Debug\net7.0\Day18.dll
+E:\ChristmasAdvent-master\Day18\bin\Debug\net7.0\Day18.pdb
+E:\ChristmasAdvent-master\Day18\obj\Debug\net7.0\Day18.dll
+E:\ChristmasAdvent-master\Day18\obj\Debug\net7.0\refint\Day18.dll
+E:\ChristmasAdvent-master\Day18\obj\Debug\net7.0\Day18.pdb
+E:\ChristmasAdvent-master\Day18\obj\Debug\net7.0\Day18.genruntimeconfig.cache
+E:\ChristmasAdvent-master\Day18\obj\Debug\net7.0\ref\Day18.dll

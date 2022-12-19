@@ -1,0 +1,15 @@
+E:\ChristmasAdvent-master\Day17\bin\Debug\net7.0\Day17.exe
+E:\ChristmasAdvent-master\Day17\bin\Debug\net7.0\Day17.deps.json
+E:\ChristmasAdvent-master\Day17\bin\Debug\net7.0\Day17.runtimeconfig.json
+E:\ChristmasAdvent-master\Day17\bin\Debug\net7.0\Day17.dll
+E:\ChristmasAdvent-master\Day17\bin\Debug\net7.0\Day17.pdb
+E:\ChristmasAdvent-master\Day17\obj\Debug\net7.0\Day17.csproj.AssemblyReference.cache
+E:\ChristmasAdvent-master\Day17\obj\Debug\net7.0\Day17.GeneratedMSBuildEditorConfig.editorconfig
+E:\ChristmasAdvent-master\Day17\obj\Debug\net7.0\Day17.AssemblyInfoInputs.cache
+E:\ChristmasAdvent-master\Day17\obj\Debug\net7.0\Day17.AssemblyInfo.cs
+E:\ChristmasAdvent-master\Day17\obj\Debug\net7.0\Day17.csproj.CoreCompileInputs.cache
+E:\ChristmasAdvent-master\Day17\obj\Debug\net7.0\Day17.dll
+E:\ChristmasAdvent-master\Day17\obj\Debug\net7.0\refint\Day17.dll
+E:\ChristmasAdvent-master\Day17\obj\Debug\net7.0\Day17.pdb
+E:\ChristmasAdvent-master\Day17\obj\Debug\net7.0\Day17.genruntimeconfig.cache
+E:\ChristmasAdvent-master\Day17\obj\Debug\net7.0\ref\Day17.dll
