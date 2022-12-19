@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w/DzvwVJXjy0TuSbROQ+f6O7KRG0LQIXye/uHGovhDUP2QW2mUj5eG02iSC8EWpqr6RxJY4u9Z51XcuPs9gRug==",
+  "dgSpecHash": "QJsJP47DRCZpOOQpDZBEIke/yKAx4xTbKDp123Nu0M4CbgNk0RjMmgSCoLjDmHIvkUN89aDOa3dKqajBKAwdkQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ajwpc\\Github\\ChristmasAdvent\\Day1\\Day1.csproj",
+  "projectFilePath": "C:\\Users\\ajwpc\\Github\\ChristmasAdvent\\Day01\\Day1.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

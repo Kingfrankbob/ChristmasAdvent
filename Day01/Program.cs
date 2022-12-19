@@ -31,6 +31,8 @@
             var topThreeTotal = topThree.Sum();
             Console.WriteLine("Top Three Total: " + topThreeTotal);
 
+
+
         }
 
     }
