@@ -10,12 +10,10 @@ class adventCald10p2
         Console.Clear();
         Console.BackgroundColor = ConsoleColor.DarkBlue;
         Console.ForegroundColor = ConsoleColor.White;
-        string Add = "addx";
         string Noop = "noop";
         //int cycle = 0;
         int total = 1;
         int addVal = 0;
-        int placeHold = 0;
         char[] Screen = new char[240];
         string file = @"Input.txt";
         StringBuilder outputBuilder = new();
@@ -45,7 +43,7 @@ class adventCald10p2
         }
 
         Console.WriteLine(outputBuilder.ToString());
-        }
+    }
 
     static StringBuilder Process(int total, StringBuilder outputBuilder)
     {
@@ -58,7 +56,7 @@ class adventCald10p2
             outputBuilder.Append(".");
         }
 
-        cycle+=1;
+        cycle += 1;
 
         if (cycle % 40 == 0)
         {
@@ -69,5 +67,5 @@ class adventCald10p2
     }
 
 
-    
+
 }

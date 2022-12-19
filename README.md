@@ -11,6 +11,9 @@ I cannot get it to work no matter what I do. I even tried to mod it like Brad Wi
 #### Why?
 Well I was on ths stream with brad, and it was not working; plus using his method (currently working) it took 15 min. to find the correct path.
 I did help a bit ig, giving ideas but other than that I do not know how to do such things
+### Day 19
+#### Uh...
+I did it, just never got it to work correctly; Need to work on it when I know more in the matter;
 
 
 ## Credits

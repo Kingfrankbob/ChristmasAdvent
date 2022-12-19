@@ -30,9 +30,6 @@
             var topThree = totalList.OrderByDescending(x => x).Take(3).ToList();
             var topThreeTotal = topThree.Sum();
             Console.WriteLine("Top Three Total: " + topThreeTotal);
-
-
-
         }
 
     }

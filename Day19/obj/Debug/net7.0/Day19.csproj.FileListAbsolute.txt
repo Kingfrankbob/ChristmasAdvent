@@ -1,0 +1,15 @@
+C:\Users\ajwpc\Github\ChristmasAdvent\Day19\bin\Debug\net7.0\Day19.exe
+C:\Users\ajwpc\Github\ChristmasAdvent\Day19\bin\Debug\net7.0\Day19.deps.json
+C:\Users\ajwpc\Github\ChristmasAdvent\Day19\bin\Debug\net7.0\Day19.runtimeconfig.json
+C:\Users\ajwpc\Github\ChristmasAdvent\Day19\bin\Debug\net7.0\Day19.dll
+C:\Users\ajwpc\Github\ChristmasAdvent\Day19\bin\Debug\net7.0\Day19.pdb
+C:\Users\ajwpc\Github\ChristmasAdvent\Day19\obj\Debug\net7.0\Day19.csproj.AssemblyReference.cache
+C:\Users\ajwpc\Github\ChristmasAdvent\Day19\obj\Debug\net7.0\Day19.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ajwpc\Github\ChristmasAdvent\Day19\obj\Debug\net7.0\Day19.AssemblyInfoInputs.cache
+C:\Users\ajwpc\Github\ChristmasAdvent\Day19\obj\Debug\net7.0\Day19.AssemblyInfo.cs
+C:\Users\ajwpc\Github\ChristmasAdvent\Day19\obj\Debug\net7.0\Day19.csproj.CoreCompileInputs.cache
+C:\Users\ajwpc\Github\ChristmasAdvent\Day19\obj\Debug\net7.0\Day19.dll
+C:\Users\ajwpc\Github\ChristmasAdvent\Day19\obj\Debug\net7.0\refint\Day19.dll
+C:\Users\ajwpc\Github\ChristmasAdvent\Day19\obj\Debug\net7.0\Day19.pdb
+C:\Users\ajwpc\Github\ChristmasAdvent\Day19\obj\Debug\net7.0\Day19.genruntimeconfig.cache
+C:\Users\ajwpc\Github\ChristmasAdvent\Day19\obj\Debug\net7.0\ref\Day19.dll
