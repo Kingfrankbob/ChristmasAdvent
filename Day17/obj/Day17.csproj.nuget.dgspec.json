@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ChristmasAdvent-master\\Day17\\Day17.csproj": {}
+    "C:\\Users\\ajwpc\\Github\\ChristmasAdvent\\Day17\\Day17.csproj": {}
   },
   "projects": {
-    "E:\\ChristmasAdvent-master\\Day17\\Day17.csproj": {
+    "C:\\Users\\ajwpc\\Github\\ChristmasAdvent\\Day17\\Day17.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ChristmasAdvent-master\\Day17\\Day17.csproj",
+        "projectUniqueName": "C:\\Users\\ajwpc\\Github\\ChristmasAdvent\\Day17\\Day17.csproj",
         "projectName": "Day17",
-        "projectPath": "E:\\ChristmasAdvent-master\\Day17\\Day17.csproj",
-        "packagesPath": "C:\\Users\\KingQueen\\.nuget\\packages\\",
-        "outputPath": "E:\\ChristmasAdvent-master\\Day17\\obj\\",
+        "projectPath": "C:\\Users\\ajwpc\\Github\\ChristmasAdvent\\Day17\\Day17.csproj",
+        "packagesPath": "C:\\Users\\ajwpc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ajwpc\\Github\\ChristmasAdvent\\Day17\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\KingQueen\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ajwpc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
