@@ -30,8 +30,6 @@ namespace Day17
                                                   { '#', '#', '#'},
                                                   { '.', '#', '.'} };
 
-            // var breaktru = false;
-
             preRockS.y = 0;
 
             while (rockFallen < 10)
@@ -85,9 +83,6 @@ namespace Day17
                 }
 
                 preRockS = curRockS;
-
-                // botY += curRockS.Height;
-
 
                 rockFallen++;
 
