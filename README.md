@@ -22,7 +22,7 @@ My solution is Brad Wilsons, as listed Below. He manually entered the data. I my
 I decided that I since I need to finish day 17 and 25 I am going to stop my work on these, and use Brad Wilsons solutions, again link to his repo below. 
 
 ## Credits
-Brad Wilson and his repo have been a great help: https://github.com/bradwilson/advent-2022/blob/main/day13/Program.cs (I have not used his in most of them!)
+Brad Wilson and his repo have been a great help: https://github.com/bradwilson/advent-2022/
 
 ## How much do I do?
 I have done most of the days myself without reference, but those which I did not, I did write a note I believe.
