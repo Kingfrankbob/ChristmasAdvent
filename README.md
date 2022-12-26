@@ -23,6 +23,7 @@ I decided that I since I need to finish day 17 and 25 I am going to stop my work
 
 ## Credits
 Brad Wilson and his repo have been a great help: https://github.com/bradwilson/advent-2022/
+Some more cool stuff: https://github.com/bradwilson/advent-2022/issues/1#issuecomment-1363572186
 
 ## How much do I do?
 I have done most of the days myself without reference, but those which I did not, I did write a note I believe.
