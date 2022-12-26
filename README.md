@@ -17,6 +17,9 @@ I did it, just never got it to work correctly; Need to work on it when I know mo
 ### Day 22
 #### Only Part 2 tho...
 My solution is Brad Wilsons, as listed Below. He manually entered the data. I myself attempted that but to no avail. Good luck to everyone!!!
+### Days 23, 24
+#### I do not have the time to work on them!
+I decided that I since I need to finish day 17 and 25 I am going to stop my work on these, and use Brad Wilsons solutions, again link to his repo below. 
 
 ## Credits
 Brad Wilson and his repo have been a great help: https://github.com/bradwilson/advent-2022/blob/main/day13/Program.cs (I have not used his in most of them!)
