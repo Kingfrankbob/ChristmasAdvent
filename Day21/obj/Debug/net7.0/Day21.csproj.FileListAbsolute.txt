@@ -1,0 +1,15 @@
+C:\Users\cragu\Downloads\ChristmasAdvent-master\ChristmasAdvent-master\Day21\obj\Debug\net7.0\Day21.csproj.AssemblyReference.cache
+C:\Users\cragu\Downloads\ChristmasAdvent-master\ChristmasAdvent-master\Day21\obj\Debug\net7.0\Day21.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cragu\Downloads\ChristmasAdvent-master\ChristmasAdvent-master\Day21\obj\Debug\net7.0\Day21.AssemblyInfoInputs.cache
+C:\Users\cragu\Downloads\ChristmasAdvent-master\ChristmasAdvent-master\Day21\obj\Debug\net7.0\Day21.AssemblyInfo.cs
+C:\Users\cragu\Downloads\ChristmasAdvent-master\ChristmasAdvent-master\Day21\obj\Debug\net7.0\Day21.csproj.CoreCompileInputs.cache
+C:\Users\cragu\Downloads\ChristmasAdvent-master\ChristmasAdvent-master\Day21\bin\Debug\net7.0\Day21.exe
+C:\Users\cragu\Downloads\ChristmasAdvent-master\ChristmasAdvent-master\Day21\bin\Debug\net7.0\Day21.deps.json
+C:\Users\cragu\Downloads\ChristmasAdvent-master\ChristmasAdvent-master\Day21\bin\Debug\net7.0\Day21.runtimeconfig.json
+C:\Users\cragu\Downloads\ChristmasAdvent-master\ChristmasAdvent-master\Day21\bin\Debug\net7.0\Day21.dll
+C:\Users\cragu\Downloads\ChristmasAdvent-master\ChristmasAdvent-master\Day21\bin\Debug\net7.0\Day21.pdb
+C:\Users\cragu\Downloads\ChristmasAdvent-master\ChristmasAdvent-master\Day21\obj\Debug\net7.0\Day21.dll
+C:\Users\cragu\Downloads\ChristmasAdvent-master\ChristmasAdvent-master\Day21\obj\Debug\net7.0\refint\Day21.dll
+C:\Users\cragu\Downloads\ChristmasAdvent-master\ChristmasAdvent-master\Day21\obj\Debug\net7.0\Day21.pdb
+C:\Users\cragu\Downloads\ChristmasAdvent-master\ChristmasAdvent-master\Day21\obj\Debug\net7.0\Day21.genruntimeconfig.cache
+C:\Users\cragu\Downloads\ChristmasAdvent-master\ChristmasAdvent-master\Day21\obj\Debug\net7.0\ref\Day21.dll
