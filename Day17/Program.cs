@@ -46,7 +46,7 @@ namespace Day17
                 if (rockFallen == 0) curRockS.y = botY + 4;
                 if (rockFallen != 0) curRockS.y = botY + 4;
 
-                while (!(yHitsPerLayer.ContainsKey(curRockS.y - 1)))
+                while (curRockS.hasCollided(curRockS, preRockS, yHitsPerLayer, botY) == 2147483647)
                 {
                     Console.Write(" Current Y: " + curRockS.y + " boty: " + botY + " Height: " + height + " Cur x Max: " + curRockS.xMax + " Cur x Min: " + curRockS.xMin + " Line: " + line[jetSteamCounter] + " jetCounter: " + jetSteamCounter);
                     if (line[jetSteamCounter] == '<') { curRockS.shiftLeft(); Console.WriteLine(" Left Shift "); }
@@ -54,27 +54,28 @@ namespace Day17
                     jetSteamCounter++;
                     if (jetSteamCounter > line.Length - 1) jetSteamCounter = 0;
                     curRockS.y--;
+                    if (curRockS.y < 0) while (true) { };
                     // Console.WriteLine(" Current Y after shift and drop " + curRockS.y + " boty: " + botY);
 
                 }
-                Console.WriteLine(" Current Y After Falling: " + curRockS.y + " boty: " + botY + " prevY: " + preRockS.y + " Height: " + height + " Cur x Max: " + curRockS.xMax + " Cur x Min: " + curRockS.xMin + " Current Shape" + curRockS.rockShapeNum + " Line: " + line[jetSteamCounter] + " jetCounter: " + jetSteamCounter);
-                jetSteamCounter++;
-                if (curRockS.hasCollided(curRockS, preRockS, yHitsPerLayer, botY) == 2147483647)
-                {
-                    while (curRockS.hasCollided(curRockS, preRockS, yHitsPerLayer, botY) == 2147483647)
-                    {
-                        Console.Write(" Current Y Past: " + curRockS.y + " boty: " + botY + " prevY: " + preRockS.y + " Height: " + height + " Cur x Max: " + curRockS.xMax + " Cur x Min: " + curRockS.xMin + " Current Shape" + curRockS.rockShapeNum + " Line: " + line[jetSteamCounter]);
-                        if (line[jetSteamCounter] == '<') { curRockS.shiftLeft(); Console.WriteLine(" Left Shift "); }
-                        if (line[jetSteamCounter] == '>') { curRockS.shiftRight(); Console.WriteLine(" Right Shift "); }
-                        jetSteamCounter++;
-                        if (jetSteamCounter > line.Length - 1) jetSteamCounter = 0;
-                        curRockS.y--;
-                    }
-                    height += curRockS.hasCollided(curRockS, preRockS, yHitsPerLayer, botY);
-                    botY += curRockS.hasCollided(curRockS, preRockS, yHitsPerLayer, botY);
-                    yHitsPerLayer = Rock.addRockHits(curRockS, yHitsPerLayer, botY);
-                }
-                else
+                // Console.WriteLine(" Current Y After Falling: " + curRockS.y + " boty: " + botY + " prevY: " + preRockS.y + " Height: " + height + " Cur x Max: " + curRockS.xMax + " Cur x Min: " + curRockS.xMin + " Current Shape" + curRockS.rockShapeNum + " Line: " + line[jetSteamCounter] + " jetCounter: " + jetSteamCounter);
+                // if (rockFallen == 0) jetSteamCounter++;
+                // if (curRockS.hasCollided(curRockS, preRockS, yHitsPerLayer, botY) == 2147483647)
+                // {
+                //     while (curRockS.hasCollided(curRockS, preRockS, yHitsPerLayer, botY) == 2147483647)
+                //     {
+                //         Console.Write(" Current Y Past: " + curRockS.y + " boty: " + botY + " prevY: " + preRockS.y + " Height: " + height + " Cur x Max: " + curRockS.xMax + " Cur x Min: " + curRockS.xMin + " Current Shape" + curRockS.rockShapeNum + " Line: " + line[jetSteamCounter]);
+                //         if (line[jetSteamCounter] == '<') { curRockS.shiftLeft(); Console.WriteLine(" Left Shift "); }
+                //         if (line[jetSteamCounter] == '>') { curRockS.shiftRight(); Console.WriteLine(" Right Shift "); }
+                //         jetSteamCounter++;
+                //         if (jetSteamCounter > line.Length - 1) jetSteamCounter = 0;
+                //         curRockS.y--;
+                //     }
+                //     height += curRockS.hasCollided(curRockS, preRockS, yHitsPerLayer, botY);
+                //     botY += curRockS.hasCollided(curRockS, preRockS, yHitsPerLayer, botY);
+                //     yHitsPerLayer = Rock.addRockHits(curRockS, yHitsPerLayer, botY);
+                // }
+                // else
                 {
                     height += curRockS.hasCollided(curRockS, preRockS, yHitsPerLayer, botY);
                     botY += curRockS.hasCollided(curRockS, preRockS, yHitsPerLayer, botY);
@@ -291,17 +292,26 @@ namespace Day17
                         return 0;
                 }
             }
+
             public int hasCollided(Rock currentRock, Rock previousRock, Dictionary<int, int[]> yHitsPerLayer, int botY)
             {
+                var hitsCurrent = new int[] { };
                 if (currentRock == null || previousRock == null)
                 {
                     Console.WriteLine("Error: Rock is null! Current: " + currentRock + " Previous: " + previousRock);
                     return 0;
                 }
 
-                var hitsCurrent = yHitsPerLayer[currentRock.y - 1];
-                // Console.WriteLine("Y: " + currentRock.y);
-
+                try
+                {
+                    hitsCurrent = yHitsPerLayer[currentRock.y - 1];
+                    // Console.WriteLine("Y: " + currentRock.y);
+                }
+                catch (Exception)
+                {
+                    System.Console.WriteLine("Error: No hits found for y: " + currentRock.y);
+                    return 2147483647;
+                }
                 foreach (var item in currentRock.botXHits)
                 {
                     if (hitsCurrent.Contains(item))
